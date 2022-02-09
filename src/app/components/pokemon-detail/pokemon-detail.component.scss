@@ -1,0 +1,19 @@
+.pokemon-detail-modal{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    div{
+        width: 50%;
+    }
+    .pokemon-detail{
+        padding: 10px;
+        font-size: 14px;
+        color: black
+    }
+
+    .pokemon-img{
+        max-width: 500px;
+        max-height: 500px;
+    }
+}

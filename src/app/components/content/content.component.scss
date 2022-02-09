@@ -1,0 +1,38 @@
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  position: relative;
+//   margin: 10px 0;
+}
+
+.pokemon-section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:20px;
+    .pokemon-item{
+        width: 19%;
+        background-color: #f2f2f2;
+        height: 200px;
+        border-radius: 5px;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: 5px 5px #726c6c;
+        position: relative;
+        p{
+            color: #000000fc;
+            position: absolute;
+            bottom: 3px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+.view-more{
+    margin-top:30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: right;
+}

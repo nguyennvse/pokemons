@@ -1,0 +1,22 @@
+.menu{
+    background-color: rgba(0,0,0,.6);
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    .container{
+        display: flex;
+    }
+
+    .menu-item-container{
+        display: flex;
+        font-size: 30px;
+        color: white;
+        width: calc(100% - 200px);
+        div{
+            align-content:space-between;
+            width: 25%;
+            text-align: center;
+            line-height: 200px;
+        }
+    }
+}

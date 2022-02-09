@@ -1,0 +1,44 @@
+.header{
+    width: 100%;
+    background-color: black;
+    .container{
+        height: 40px;
+        line-height: 40px;
+        color:black;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 13px;
+        padding-left: 10px;
+        .icon-container{
+            float:left;
+            width: 50%;
+            .icons{
+                float: left;
+                margin-left:10px;
+                i{
+                    background-color: lightgrey;
+                    border-radius: 50%;
+                    height: 25px;
+                    width: 25px;
+                    text-align: center;
+                    line-height: 25px;
+                }
+            }
+        }
+       
+        .right-container{
+            float: right;
+            color: white;
+            width: 50%;
+            .right-icons{
+                float: right;
+                text-align: center;
+                margin-right: 30px;
+            }
+        }
+
+       
+    }
+   
+}

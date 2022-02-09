@@ -1,0 +1,22 @@
+<div class="pokemon-detail-modal">
+    <div class="pokemon-img"><img width="100%" height="100%" [src]="data.sprites.front_default"/></div>
+    <div class="pokemon-detail">
+        <p>Name : {{data.name}}</p>
+        <p>Species : {{data.species.name}}</p>
+        <p>Type : {{data.name}}</p>
+        <p>Form : <ng-container *ngFor="let form of data.forms">{{form.name}}, </ng-container></p>
+        <p>Abilities :<ng-container *ngFor="let ability of data.abilities">{{ability.ability.name}}, </ng-container></p>
+        <p>Item :<ng-container *ngFor="let item of data.held_items">{{item.item.name}}, </ng-container> <ng-container *ngIf="!data.held_items.length">N/A</ng-container></p>
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Stats</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>hp: {{data.stats[0] ? data.stats[0].base_stat : ''}}</p>
+            <p>attack: {{data.stats[1] ? data.stats[1].base_stat : ''}}</p>
+            <p>defense: {{data.stats[2] ? data.stats[2].base_stat : ''}}</p>
+            <p>special-attack: {{data.stats[3] ? data.stats[3].base_stat : ''}}</p>
+            <p>special-defense: {{data.stats[4] ? data.stats[4].base_stat : ''}}</p>
+            <p>speed: {{data.stats[5] ? data.stats[5].base_stat : ''}}</p>
+          </mat-expansion-panel>
+    </div>
+</div>
