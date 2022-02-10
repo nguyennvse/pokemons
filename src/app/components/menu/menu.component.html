@@ -2,10 +2,19 @@
     <div class="container">
         <img src="../../../assets/LOGO.jpg" width="200px" height="200px">
         <div class="menu-item-container">
-            <div>Games</div>
-            <div>Generations</div>
-            <div>Locations</div>
-            <div>Items</div>
+            <button mat-button [matMenuTriggerFor]="Games">Games</button>
+            <button mat-button [matMenuTriggerFor]="Generations">Generations</button>
+            <button mat-button >Locations</button>
+            <button mat-button >Items</button>
         </div>
     </div>
 </div>  
+
+<mat-menu #Games="matMenu">
+    <button *ngFor="let game of gameList" mat-menu-item>{{game.name}}</button>
+</mat-menu>
+
+
+<mat-menu #Generations="matMenu">
+    <button *ngFor="let generation of generationsList" mat-menu-item>{{generation.name}}</button>
+</mat-menu>

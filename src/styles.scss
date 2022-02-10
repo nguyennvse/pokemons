@@ -22,3 +22,21 @@ body {
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.pokemon-item{
+  width: 19%;
+  background-color: #f2f2f2;
+  height: 200px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 20px;
+  box-shadow: 5px 5px #726c6c;
+  position: relative;
+  p{
+      color: #000000fc;
+      position: absolute;
+      bottom: 3px;
+      text-align: center;
+      width: 100%;
+  }
+}

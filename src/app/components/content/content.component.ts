@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { forkJoin } from 'rxjs';
 import { BaseApiService } from 'src/services/base-api.service';
@@ -15,7 +16,8 @@ export class ContentComponent implements OnInit {
    pokemonList:any[] = [];
   constructor(
     private baseApiService:BaseApiService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -32,11 +34,14 @@ export class ContentComponent implements OnInit {
   }
 
   viewPokemonDetail(pokemonInfomation:any){
-    console.log('pokemon detail',pokemonInfomation);
     this.dialog.open(PokemonDetailComponent,{
-      width: '70vh',
-      height: '70vh',
+      width: '70wh',
+      height: '60vh',
       data: pokemonInfomation,
     })
+  }
+
+  viewMore(){
+    this.router.navigate(['view-more']);
   }
 }

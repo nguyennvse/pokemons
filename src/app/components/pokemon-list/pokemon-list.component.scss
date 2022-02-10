@@ -1,0 +1,21 @@
+.pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        width: 19%;
+        margin: 5px;
+    }
+}
+
+.search{
+    margin: 10px auto;
+    background-color: #424242;
+    padding: 0 20px;
+    button{
+        float:right;
+        margin:auto
+    }
+}
+// ::ng-deep .mat-paginator-container{
+//     background-color: grey;
+// }

@@ -12,11 +12,24 @@
         font-size: 30px;
         color: white;
         width: calc(100% - 200px);
-        div{
+        button{
             align-content:space-between;
             width: 25%;
             text-align: center;
             line-height: 200px;
+            background-color: unset;
+            color: white;
+            border: unset;
+            font-size: 30px;
         }
+       
     }
+}
+
+@media (max-width:1000px) {
+    .menu-item-container{
+        button{
+            font-size: 20px;
+        }
+    }          
 }

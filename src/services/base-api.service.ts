@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { forkJoin } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,10 @@ export class BaseApiService {
 
   get(url:string){
     return this.httpClient.get(`${this.baseUrl}${url}`);
+  }
+
+  getRandomTenPokemon(pokemonNumber:number){
+    return forkJoin(Array.from({length: pokemonNumber}, () => Math.floor(Math.random() * 101)+1).map(pokemonId => {return this.get(`pokemon/${pokemonId}`);})
+    );
   }
 }

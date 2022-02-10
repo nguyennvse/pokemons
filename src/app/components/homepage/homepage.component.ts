@@ -8,10 +8,9 @@ import { BaseApiService } from 'src/services/base-api.service';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor(private baseApiService:BaseApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.baseApiService.configApp();
   }
 
 }

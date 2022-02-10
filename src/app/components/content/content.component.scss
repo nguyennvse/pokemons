@@ -35,4 +35,21 @@
     font-weight: bold;
     color: white;
     text-align: right;
+    display: flex;
+    padding: 0 10px;
+}
+
+.view-more::before,.view-more::after{
+    border-bottom: 4px solid black;
+    content: "";
+    display: block;
+    transform: translateY(-5px);
+}
+
+.view-more::after{
+    width: 20%;
+}
+
+.view-more::before{
+    width: 40%;
 }

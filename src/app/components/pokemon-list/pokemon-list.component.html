@@ -1,0 +1,23 @@
+<div class="container search">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Pokemon name</mat-label>
+        <input matInput [(ngModel)]='searchInput' (keyup)="searchPokemon($event)"/>
+      </mat-form-field>
+      <button class="lang-btn" mat-raised-button color="accent" (click)="showJpName=!showJpName"> {{showJpName ? 'English' : 'Japanese'}}</button>
+</div>
+<div class="pokemon-list container">
+    <div (click)="viewPokemonDetail(pokemon)" class="pokemon-item" *ngFor="let pokemon of filterPokemonList$ | async">
+        <p>{{ showJpName ? pokemon.jpName : pokemon.name}}</p>
+        <img height="100%" width="100%" [src]="pokemon.sprites.front_default" >
+    </div>
+</div>
+<div class="container mt-10">
+    <mat-paginator
+    [length]="pokemonCount"
+    [pageSize]="20"
+    [pageSizeOptions]="[10, 20, 50, 100]"
+    aria-label="Select page"
+    (page)="pageChange($event)">
+</mat-paginator>
+</div>
+
