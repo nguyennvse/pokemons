@@ -10,23 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top:20px;
-    .pokemon-item{
-        width: 19%;
-        background-color: #f2f2f2;
-        height: 200px;
-        border-radius: 5px;
-        margin: 5px;
-        font-size: 20px;
-        box-shadow: 5px 5px #726c6c;
-        position: relative;
-        p{
-            color: #000000fc;
-            position: absolute;
-            bottom: 3px;
-            text-align: center;
-            width: 100%;
-        }
-    }
+    
 }
 
 .view-more{
@@ -39,17 +23,4 @@
     padding: 0 10px;
 }
 
-.view-more::before,.view-more::after{
-    border-bottom: 4px solid black;
-    content: "";
-    display: block;
-    transform: translateY(-5px);
-}
 
-.view-more::after{
-    width: 20%;
-}
-
-.view-more::before{
-    width: 40%;
-}

@@ -12,16 +12,18 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BaseApiService } from 'src/services/base-api.service';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { PokemonInterceptopService } from 'src/interceptor/interceptor.service';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +48,12 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     MatPaginatorModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
   ],
-  providers: [BaseApiService],
+  providers: [BaseApiService,
+    { provide: HTTP_INTERCEPTORS, useClass: PokemonInterceptopService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

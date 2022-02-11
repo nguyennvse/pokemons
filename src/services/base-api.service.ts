@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { forkJoin } from 'rxjs';
+import { forkJoin, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ import { forkJoin } from 'rxjs';
 export class BaseApiService {
   configUrl = 'appconfig/config.json';
   baseUrl = 'https://pokeapi.co/api/v2/';
+  spinnerSubject = new Subject();
   constructor(public httpClient: HttpClient) {
   }
 

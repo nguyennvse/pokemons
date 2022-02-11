@@ -9,7 +9,10 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 
 const routes: Routes = [
   {path : '' , component: ContentComponent},
-  {path : 'view-more', component: PokemonListComponent,resolve:{ data : GetPokemonResolveService}},
+  {
+    path : 'view-more', component: PokemonListComponent,
+    resolve:{ data : GetPokemonResolveService},
+    },
   {path : '**' , component: ContentComponent},
 ];
 
